@@ -63,7 +63,7 @@ export default function Home() {
       <Header />
 </div>
       <div
-  className="relative w-full overflow-hidden mt-[4.5rem] h-[380px] sm:h-[400px] md:h-[500px]"
+  className="relative w-full overflow-hidden mt-[4.5rem] h-[500px] sm:h-[400px] md:h-[500px]"
 >
 
         {carImages.map((url, index) => (
