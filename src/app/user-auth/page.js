@@ -11,8 +11,8 @@ const UserAuth = (props) => {
     return (
         <div className="min-h-screen flex flex-col bg-gradient-to-br from-blue-100 to-blue-300">
             <Header />
-            <div className="flex-grow flex flex-col items-center justify-center px-8 pt-2">
-                <div className="w-full sm:max-w-sm md:max-w-md lg:max-w-lg bg-white shadow-md rounded-xl p-2">
+            <div className="flex-grow flex flex-col items-center justify-center px-2 pt-2">
+                <div className="w-full sm:max-w-sm md:max-w-md lg:max-w-lg rounded-xl">
                     {login ? <Login redirect={props.searchParams} /> : <Signup redirect={props.searchParams} />}
                 </div>
                 <button 

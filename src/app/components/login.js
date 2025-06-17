@@ -43,9 +43,9 @@ export default function Login() {
   };
 
   return (
-    <div className="flex items-center justify-center">
+    <div className="flex items-center justify-center px-10 py-2">
       <div className="w-full sm:max-w-sm md:max-w-md lg:max-w-lg p-6 sm:p-8 bg-white rounded-xl shadow-2xl">
-        <h1 className="text-center font-bold text-3xl text-blue-700 mb-6">
+        <h1 className="text-center font-bold sm:text-3xl text-xl text-blue-700 mb-6">
           Login
         </h1>
 
@@ -60,7 +60,7 @@ export default function Login() {
           onKeyDown={(e) => {
             if (e.key === "Enter") passwordRef.current.focus();
           }}
-          className="border border-gray-300 p-3 mb-4 rounded w-full text-black focus:outline-none focus:ring-2 focus:ring-blue-400"
+          className="border border-gray-300 p-2 sm:p-3 sm:mb-4 mb-3 rounded w-full text-sm text-black focus:outline-none focus:ring-2 focus:ring-blue-400"
         />
 
         <input
@@ -72,13 +72,15 @@ export default function Login() {
           onKeyDown={(e) => {
             if (e.key === "Enter") handleLogin();
           }}
-          className="border border-gray-300 p-3 mb-4 rounded w-full text-black focus:outline-none focus:ring-2 focus:ring-blue-400"
+          className="border border-gray-300 p-2 sm:p-3 sm:mb-4 mb-3 rounded w-full text-sm text-black focus:outline-none focus:ring-2 focus:ring-blue-400"
         />
 
         <button
-          onClick={handleLogin}
+          onClick={(e)=>{
+            e.preventDefault();
+            handleLogin();}}
           disabled={loading}
-          className={`w-full p-3 text-white font-semibold rounded transition ${
+          className={`w-full sm:p-3 p-2 text-white font-semibold rounded transition ${
             loading
               ? "bg-gray-500 cursor-not-allowed"
               : "bg-blue-700 hover:bg-blue-800 hover:scale-105"

@@ -62,9 +62,10 @@ export default function Home() {
     <><div className="fixed top-0 overflow-hidden w-full z-10">
       <Header />
 </div>
-      <div className="h-calc(100vh -72px) w-full mt-18"
-        style={{ position: "relative", height: "500px", overflow: "hidden" }}
-      >
+      <div
+  className="relative w-full overflow-hidden mt-[4.5rem] h-[380px] sm:h-[400px] md:h-[500px]"
+>
+
         {carImages.map((url, index) => (
           <div
             key={index}
@@ -96,12 +97,12 @@ export default function Home() {
             zIndex: 2,
           }}
         >
-          <h1 className="text-white text-5xl font-bold mt-2">CARS SHOWCASE</h1>
+          <h1 className="text-white sm:text-5xl text-3xl font-bold sm:mt-2 p-1">CARS SHOWCASE</h1>
         </div>
       </div>
 
-      <div id="showroom-section" className="bg-gray-900 py-5 px-5">
-        <h1 className="text-center text-3xl font-bold text-white mb-8">
+      <div id="showroom-section" className="bg-gray-900 py-5 px-5 scroll-mt-1">
+        <h1 className="text-center text-2xl sm:text-3xl  font-bold text-white mb-6">
           SHOWROOM
         </h1>
         <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto cursor-pointer">
@@ -115,13 +116,13 @@ export default function Home() {
                 }
               }}
               key={index}
-              className="bg-white rounded-lg shadow-lg p-4 hover:scale-105 transition-transform duration-300"
+              className="bg-white rounded-lg shadow-lg sm:p-4 p-2 hover:scale-105 transition-transform duration-300"
             >
-              <h2 className="text-xl font-semibold mb-2 text-gray-800">
+              <h2 className="text-sm sm:text-xl font-semibold mb-1 text-gray-800">
                 {showroom.name}
               </h2>
-              <p className="text-gray-600">Experience: {showroom.experience}</p>
-              <p className="text-gray-600">Location: {showroom.location}</p>
+              <p className="text-gray-600 text-sm sm:text-xl">Experience: {showroom.experience}</p>
+              <p className="text-gray-600 text-sm sm:text-xl">Location: {showroom.location}</p>
             </div>
           ))}
         </div>

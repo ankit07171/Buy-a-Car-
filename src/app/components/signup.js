@@ -3,7 +3,7 @@ import Login from "./login.js";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation"; 
 
-function signup() {
+function Signup() {
   const [name, setName] = useState("");
   const [age, setAge] = useState("");
   const [email, setEmail] = useState("");
@@ -70,9 +70,9 @@ function signup() {
   };
 
   return (
-    <div className="flex justify-center items-center bg-gray-100">
-      <div className="w-full max-w-md p-8 bg-white rounded-lg shadow-lg">
-        <h1 className="text-center font-bold text-3xl text-blue-700 mb-6">
+    <div className="flex justify-center items-center px-10 py-2">
+      <div className="w-full max-w-md px-8  py-2 sm:py-4 bg-white rounded-lg shadow-lg">
+        <h1 className="text-center font-bold text-xl sm:text-3xl text-blue-700 mb-4">
           Sign In
         </h1>
 
@@ -85,7 +85,7 @@ function signup() {
           placeholder="Enter Name"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className="border border-gray-300 p-3 mb-4 rounded w-full text-black"
+          className="border border-gray-300 p-2 sm:p-3 sm:mb-4 mb-2 rounded w-full text-black text-sm"
         />
 
         <input
@@ -93,7 +93,7 @@ function signup() {
           placeholder="Enter Age"
           value={age}
           onChange={(e) => setAge(e.target.value)}
-          className="border border-gray-300 p-3 mb-4 rounded w-full text-black"
+          className="border border-gray-300 p-2 sm:p-3 sm:mb-4 mb-3  rounded w-full text-black text-sm"
         />
 
         <input
@@ -101,7 +101,7 @@ function signup() {
           placeholder="Enter Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="border border-gray-300 p-3 mb-4 rounded w-full text-black"
+          className="border border-gray-300 p-2 sm:p-3 sm:mb-4 mb-3  rounded w-full text-black text-sm"
         />
 
         <input
@@ -109,7 +109,7 @@ function signup() {
           placeholder="Create Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          className="border border-gray-300 p-3 mb-4 rounded w-full text-black"
+          className="border border-gray-300 p-2 sm:p-3 sm:mb-4 mb-3 rounded w-full text-black text-sm"
         />
 
         <input
@@ -117,12 +117,14 @@ function signup() {
           placeholder="Confirm Password"
           value={c_password}
           onChange={(e) => setCPassword(e.target.value)}
-          className="border border-gray-300 p-3 mb-4 rounded w-full text-black"
+          className="border border-gray-300 p-2 sm:p-3 sm:mb-4 mb-3 rounded w-full text-black text-sm"
         />
 
         <button
-          className="w-full p-3 bg-blue-600  cursor-pointer text-white font-semibold rounded hover:bg-blue-800 transition"
-          onClick={handleSignup}
+          className="w-full p-2 sm:p-3 sm:mb-4 mb-2  bg-blue-600  cursor-pointer text-white font-semibold rounded hover:bg-blue-800 transition"
+          onClick={(e)=>{
+            e.preventDefault();
+            handleSignup();}}
         >
           {" "}
           {loading ? "Signing Up..." : "Sign Up"}
@@ -133,4 +135,4 @@ function signup() {
   );
 }
 
-export default signup;
+export default Signup;
