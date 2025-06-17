@@ -1,1 +1,14 @@
-export const connection_str="mongodb+srv://xyz717171717171:piggy2000@cluster0.4ldxsrt.mongodb.net/test?retryWrites=true&w=majority&appName=Cluster0"
+// src/app/lib/db.js
+import mongoose from "mongoose";
+
+const connectMongo = async () => {
+  if (mongoose.connections[0].readyState) {
+    return;
+  }
+  await mongoose.connect(process.env.MONGODB_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  });
+};
+
+export default connectMongo;

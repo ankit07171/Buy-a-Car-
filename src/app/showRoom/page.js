@@ -50,7 +50,7 @@ function Page() {
           onClick={() => router.push("/")}> ← Go Back
         </button>
       </div>
-    <div className="min-h-screen  flex justify-center items-center bg-gray-100">
+    <div className="min-h-screen  flex justify-center items-center bg-gray-100 px-10 py-2">
       <div className="w-full max-w-md p-8 bg-white  rounded-lg shadow-xl">
         <h1 className="text-center font-bold text-3xl text-blue-700 mb-6">
           Add Showroom
