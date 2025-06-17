@@ -1,0 +1,1 @@
+export const connection_str="mongodb+srv://xyz717171717171:piggy2000@cluster0.4ldxsrt.mongodb.net/test?retryWrites=true&w=majority&appName=Cluster0"
